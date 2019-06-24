@@ -62,7 +62,7 @@ def all_supplies_in_holidays(holiday_hash)
     puts "#{key.capitalize}:"
     value.each do |holiday,supplies|
       nuarray = holiday.to_s.tr("_"," ").split
-    puts "  #{nuarray.collect {|s| s.capitalize}.join("  ")}: #{supplies.join(", ")}"
+    puts "  #{nuarray.collect {|s| s.capitalize}.join(" ")}: #{supplies.join(", ")}"
   end
 end
 end
