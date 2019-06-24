@@ -77,14 +77,17 @@ end
 
 
 def all_holidays_with_bbq(holiday_hash)
+  nuarray = []
   holiday_hash.each do |season,data|
     data.each do |values,supplies|
-      if supplies.to_s.include?("BBQ")
-        puts "#{values}"
+      if supplies.include?("BBQ")
+        nuarray << values
+
       end
     end
 
   # return an array of holiday names (as symbols) where supply lists
   # include the string "BBQ"
 end
+nuarray
 end
